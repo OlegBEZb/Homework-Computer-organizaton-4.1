@@ -3,6 +3,7 @@
 #include <stdlib.h>
 
 void sort(int32_t * buf, uint32_t size);
+
 int32_t getMedian(int32_t * buf, uint32_t size);
 
 int main(void)

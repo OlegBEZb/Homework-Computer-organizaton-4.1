@@ -10,9 +10,9 @@ int main(void)
 {
 	int32_t mas[]={-1,1,0,4,5,0x51,14444,-5,10,9};
 	sort(mas,(uint32_t)(sizeof(mas)/4));
-	
-	int32_t buf[]={1,3,2,6,-432,0x2222,11,4,5,7,6,8,9};
-	volatile int32_t answer=getMedian(buf,(uint32_t)(sizeof(buf)/4));
+//	
+//	int32_t buf[]={1,3,2,6,-432,0x2222,11,4,5,7,6,8,9};
+//	volatile int32_t answer=getMedian(buf,(uint32_t)(sizeof(buf)/4));
 
 	while(1);
 	return 0;
@@ -53,7 +53,7 @@ of = points, we can reach 2 cases: we have odd or even number of =points left.
 If the number is even, we can divide equally them between + and - points, so we will
 have an equal amount of numbers that are "less than" and "more than" the current. So current
 number is median. And if the number is odd, we can't divide = points equally,so
-the current number will not be a median.   
+the current number will not be a median.  It is pure O(N2) 
 */
 int32_t getMedian(int32_t * buf, uint32_t size)
 {
